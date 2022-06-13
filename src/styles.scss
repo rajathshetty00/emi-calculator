@@ -1,0 +1,11 @@
+.app-wrapper {
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  .app-container{
+    padding: 24px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 24px;
+    
+  }
+}
