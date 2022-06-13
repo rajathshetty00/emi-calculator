@@ -7,7 +7,7 @@ import "./styles.scss";
 
 export default function App() {
   const initialState = {
-    principal: 200000,
+    principal: 1000000,
     tenure: 5,
     roi: 9
   };

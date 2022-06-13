@@ -42,6 +42,7 @@ function EmiChart({ principal, interestPayable }) {
           top: "33%",
           left: "50%",
           width: "100%",
+          zIndex: "-1",
           transform: "translate(-50%,50%)"
         }}
       >

@@ -6,13 +6,16 @@ const ChartFooter = ({ emi, principal, interestPayable }) => {
   return (
     <div className="chartfooter-wrapper">
       <div>
-        <Typography
-          color={theme.palette.text.secondary}
-          component="p"
-          variant="caption"
-        >
-          Monthly Emi
-        </Typography>
+        <div className="chartfooterIcon-container">
+          <div className="chartfooter-icon chartfooter-icon__green"></div>
+          <Typography
+            color={theme.palette.text.secondary}
+            component="p"
+            variant="caption"
+          >
+            Monthly Emi
+          </Typography>
+        </div>
         <Typography
           color={theme.palette.text.primary}
           component="p"
@@ -22,25 +25,31 @@ const ChartFooter = ({ emi, principal, interestPayable }) => {
         </Typography>
       </div>
       <div>
-        <Typography
-          color={theme.palette.text.secondary}
-          component="p"
-          variant="caption"
-        >
-          Principal
-        </Typography>
+        <div className="chartfooterIcon-container">
+          <div className="chartfooter-icon chartfooter-icon__yellow"></div>
+          <Typography
+            color={theme.palette.text.secondary}
+            component="p"
+            variant="caption"
+          >
+            Principal
+          </Typography>
+        </div>
         <Typography color={theme.palette.text.primary} variant="body1">
           &#8377;{principal}
         </Typography>
       </div>
       <div>
-        <Typography
-          color={theme.palette.text.secondary}
-          component="p"
-          variant="caption"
-        >
-          Interest paid
-        </Typography>
+        <div className="chartfooterIcon-container">
+          <div className="chartfooter-icon chartfooter-icon__blue"></div>
+          <Typography
+            color={theme.palette.text.secondary}
+            component="p"
+            variant="caption"
+          >
+            Interest paid
+          </Typography>
+        </div>
         <Typography color={theme.palette.text.primary} variant="body1">
           &#8377;{interestPayable}
         </Typography>

@@ -1,6 +1,6 @@
 .slider-wrapper{
   width: 100%;
-  margin: 8px;
+  margin: 8px 0;
   .slider-group{
     position: relative;
     .MuiInput-root{
@@ -9,6 +9,10 @@
       right: 0;
       &:hover{
         border: none;
+        MuiInput-root:before{
+          border: none;
+        }
+
       }
       &:before{
         border: 1px solid #9f9f9f;
@@ -29,6 +33,10 @@
 
     .MuiSlider-colorPrimary{
       margin-bottom: 36px;
+      .MuiSlider-thumb{
+        background: white;
+        border: 1px solid; 
+      }
       .MuiSlider-rail{
         background: white;
         border: 1px solid #cccccc;

@@ -8,9 +8,11 @@ const LeftSection = ({ state, dispatch }) => {
         state={state}
         dispatch={dispatch}
         title="Loan Amount"
-        max={50000000}
-        minLabel="0"
-        maxLabel="5Cr"
+        max={5000000}
+        step={20000}
+        min={20000}
+        minLabel="20K"
+        maxLabel="50L"
         type="principal"
         value={state.principal}
       />
@@ -20,7 +22,9 @@ const LeftSection = ({ state, dispatch }) => {
         type="rateOfInterest"
         title="Interest Rate"
         max={15}
-        minLabel="0"
+        step={0.1}
+        min={0.1}
+        minLabel="0.1%"
         maxLabel="15%"
         value={state.roi}
       />
@@ -29,8 +33,10 @@ const LeftSection = ({ state, dispatch }) => {
         dispatch={dispatch}
         type="loanTenure"
         title="Loan Term (Years)"
+        min={0.5}
+        step={0.5}
         max={30}
-        minLabel="0"
+        minLabel="0.5Y"
         maxLabel="30Y"
         value={state.tenure}
       />

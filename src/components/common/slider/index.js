@@ -11,9 +11,10 @@ const Input = styled(MuiInput)`
 `;
 
 export default function InputSlider({
-  state,
+  step,
   dispatch,
   title,
+  min,
   max,
   minLabel,
   maxLabel,
@@ -23,16 +24,20 @@ export default function InputSlider({
   const [val, setVal] = React.useState(value);
 
   const handleSliderChange = (event, newValue) => {
-    dispatch({ type, payload: Number(newValue) });
-    setVal(Number(event.target.value));
+    if (event.target.value >= min) {
+      dispatch({ type, payload: Number(newValue) });
+      setVal(Number(event.target.value));
+    }
   };
 
   const handleInputChange = (event) => {
-    dispatch({
-      type,
-      payload: event.target.value === "" ? "" : Number(event.target.value)
-    });
-    setVal(event.target.value === "" ? "" : Number(event.target.value));
+    if (event.target.value >= min && event.target.value <= max) {
+      dispatch({
+        type,
+        payload: event.target.value === "" ? "" : Number(event.target.value)
+      });
+      setVal(event.target.value === "" ? "" : Number(event.target.value));
+    }
   };
 
   return (
@@ -42,14 +47,15 @@ export default function InputSlider({
       </Typography>
       <div className="slider-group">
         <Slider
-          value={typeof value === "number" ? val : 0}
+          value={typeof value === "number" ? val : 1}
           onChange={handleSliderChange}
           aria-labelledby="input-slider"
           max={max}
+          step={step}
           size="medium"
           marks={[
             {
-              value: 0,
+              value: min,
               label: minLabel
             },
             {
@@ -64,7 +70,7 @@ export default function InputSlider({
           style={{ width: "120px" }}
           inputProps={{
             step: 1,
-            min: 0,
+            min: min,
             max: max,
             type: "number",
             "aria-labelledby": "input-slider"
