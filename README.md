@@ -1,6 +1,9 @@
 # emi-calculator
-Created with CodeSandbox
 
-Created with React.
+<h4>Created with React using codesandbox.</h4>
 
-Application can be run <a href="https://codesandbox.io/s/github/rajathshetty00/emi-calculator" >here</a>
+<p>Application is live! Calculate your emi from
+
+<a href="https://csb-6x9kzp.netlify.app/" >here</a>
+
+ </p>
