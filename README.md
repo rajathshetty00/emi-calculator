@@ -2,8 +2,7 @@
 
 <h4>Created with React using codesandbox.</h4>
 
-<p>Application is live! Calculate your emi from
+<p>Application is live! Calculate your emi from<a href="https://csb-6x9kzp.netlify.app/" >here</a>
+</p>
 
-<a href="https://csb-6x9kzp.netlify.app/" >here</a>
-
- </p>
+<h6>View in chrome for best experience</h6>
