@@ -69,9 +69,9 @@ export default function InputSlider({
           onChange={handleInputChange}
           style={{ width: "120px" }}
           inputProps={{
-            step: 1,
-            min: min,
-            max: max,
+            step,
+            min,
+            max,
             type: "number",
             "aria-labelledby": "input-slider"
           }}
