@@ -1,6 +1,5 @@
 import { Typography } from "@mui/material";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { useEffect, useState } from "react";
 import { Doughnut } from "react-chartjs-2";
 import theme from "../../../theme";
 
@@ -48,7 +47,7 @@ function EmiChart({ principal, interestPayable }) {
       >
         Total Amount <br />
         (Principal + Interest) <br />
-        {principal + interestPayable}
+        {principal + interestPayable || "--"}
       </Typography>
     </div>
   );

@@ -31,7 +31,7 @@ export default function InputSlider({
   };
 
   const handleInputChange = (event) => {
-    if (event.target.value >= min && event.target.value <= max) {
+    if (event.target.value >= 0 && event.target.value <= max) {
       dispatch({
         type,
         payload: event.target.value === "" ? "" : Number(event.target.value)

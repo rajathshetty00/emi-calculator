@@ -9,8 +9,8 @@ const LeftSection = ({ state, dispatch }) => {
         dispatch={dispatch}
         title="Loan Amount"
         max={5000000}
-        step={20000}
-        min={20000}
+        step={5000}
+        min={5000}
         minLabel="20K"
         maxLabel="50L"
         type="principal"

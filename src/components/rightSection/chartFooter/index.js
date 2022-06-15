@@ -36,7 +36,7 @@ const ChartFooter = ({ emi, principal, interestPayable }) => {
           </Typography>
         </div>
         <Typography color={theme.palette.text.primary} variant="body1">
-          &#8377;{principal}
+          &#8377;{principal || "--"}
         </Typography>
       </div>
       <div>
@@ -51,7 +51,7 @@ const ChartFooter = ({ emi, principal, interestPayable }) => {
           </Typography>
         </div>
         <Typography color={theme.palette.text.primary} variant="body1">
-          &#8377;{interestPayable}
+          &#8377;{interestPayable || "--"}
         </Typography>
       </div>
     </div>
